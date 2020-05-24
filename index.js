@@ -44,6 +44,6 @@ input1.watch((err, value) => {
 });
 
 input2.watch((err, value) => {
-    client.publish('CHANGE_DETECTED', `{"port": 3, "value": ${input1.readSync()}}`);
+    client.publish('CHANGE_DETECTED', `{"port": 3, "value": ${input2.readSync()}}`);
     console.log(`input2: ${input2.readSync()}`);
 });
